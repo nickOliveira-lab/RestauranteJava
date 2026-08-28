@@ -18,16 +18,28 @@ public class Pedido {
     }
 
     public Cliente getCliente(){
+        return cliente;
 
     }
 
     public List<ItemPedido> getItens() {
+        return itens;
 
     }
     public BigDecimal getTaxaEntrega(){
+        return taxaEntrega;
 
     }
     public BigDecimal getDesconto(){
+        return desconto;
 
     }
+
+    public void setTaxaEntrega(BigDecimal taxaEntrega){
+        this.taxaEntrega = taxaEntrega;
+    }
+    public void setDesconto(BigDecimal desconto){
+        this.desconto = desconto;
+    }
+
 }
