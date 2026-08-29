@@ -14,9 +14,11 @@ public class ItemPedido {
         return produto;
     }
     public int getQuantidade(){
+
         return quantidade;
     }
     public void adicionarQuantidade(int quantidade){
+
         this.quantidade += quantidade;
     }
     public BigDecimal calcularSubtotalDoItem(){

@@ -42,4 +42,25 @@ public class Pedido {
         this.desconto = desconto;
     }
 
+    private ItemPedido buscarItem(Produto produto, int indice) {
+        if (indice >= this.itens.size()) {
+            return null;
+        }
+        ItemPedido itemAtual = this.itens.get(indice);
+        if (itemAtual.getProduto() == produto){
+            return itemAtual;
+        }
+        return buscarItem(produto,indice+1);
+    }
+
+    public void adicionarItem(Produto produto, int quantidade){
+        ItemPedido itemEncontrado = buscarItem(produto,0);
+        if (itemEncontrado != null){
+            itemEncontrado.adicionarQuantidade(quantidade);
+        }else {
+            ItemPedido novoItem = new ItemPedido(produto, quantidade);
+            this.itens.add(novoItem);
+        }
+    }
+
 }
