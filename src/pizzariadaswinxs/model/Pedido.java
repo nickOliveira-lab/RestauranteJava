@@ -1,4 +1,5 @@
 package pizzariadaswinxs.model;
+import pizzariadaswinxs.exception.PedidoInvalidoException;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.ArrayList;
@@ -77,6 +78,11 @@ public class Pedido {
 
     public BigDecimal calcularTotal(){
         return calcularSubtotal(0).add(this.taxaEntrega).subtract(this.desconto);
+    }
+    public void validarParaFinalizacao( ){
+        if(estaVazio()){
+            throw new PedidoInvalidoException("O pedido precisa ter pelo menos um item!");
+        }
     }
 
 
