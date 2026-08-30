@@ -21,6 +21,18 @@ public class PagamentoService {
         return BAIRROS_ATENTIDOS.stream()
                 .anyMatch(item -> item.equalsIgnoreCase(bairro));
     }
+    public BigDecimal calcularEntrega(BigDecimal subtotal, boolean delivery) {
+
+        if (!delivery) {
+            return BigDecimal.ZERO;
+        }
+
+        if (subtotal.compareTo(LIMITE_ENTREGA_GRATIS) > 0) {
+            return BigDecimal.ZERO;
+        }
+
+        return TAXA_ENTREGA_PADRAO;
+    }
 
     public BigDecimal calcularDesconto(BigDecimal subtotal, String formaPagamento){
         boolean pagamentoPix = "PIX".equalsIgnoreCase(formaPagamento);
