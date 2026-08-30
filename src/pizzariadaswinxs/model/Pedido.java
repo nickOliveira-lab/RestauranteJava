@@ -84,6 +84,10 @@ public class Pedido {
             throw new PedidoInvalidoException("O pedido precisa ter pelo menos um item!");
         }
     }
+    public BigDecimal getSubtotal() {
+        return calcularSubtotal(0);
+    }
+
     public void mostrarResumo(){
         System.out.println("Cliente: " + this.cliente.getNome());
         System.out.println("Itens: ");
