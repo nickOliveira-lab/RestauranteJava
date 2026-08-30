@@ -69,9 +69,9 @@ public class MenuController {
             return;
         }
 
-        String colunaPizza = temPizza ? (indice + 1) + " - " + pizzas.get(indice).getNome() : "";
-        String colunaBebida = temBebida ? (indice + 1) + " - " + bebidas.get(indice).getNome() : "";
-        String colunaSobremesa = temSobremesa ? (indice + 1) + " - " + sobremesas.get(indice).getNome() : "";
+        String colunaPizza = temPizza ? (indice + 1) + " - " + pizzas.get(indice).getNome() +" "+ pizzas.get(indice).getPreco() : "";
+        String colunaBebida = temBebida ? (indice + 1) + " - " + bebidas.get(indice).getNome() +" "+ bebidas.get(indice).getPreco(): "";
+        String colunaSobremesa = temSobremesa ? (indice + 1) + " - " + sobremesas.get(indice).getNome() + " " + sobremesas.get(indice).getPreco(): "";
 
         System.out.printf("%-32s | %-25s | %-20s%n", colunaPizza, colunaBebida, colunaSobremesa);
 
@@ -92,7 +92,7 @@ public class MenuController {
         System.out.println("2 - Bebida");
         System.out.println("3 - Sobremesa");
         System.out.println("4 - Combo Pizza + Refrigerante");
-        System.out.println("0 - Cancelar");
+        System.out.println("0 - Finalizar pedido");
         System.out.print("Digite o número correspondente: ");
 
         String opcao = scanner.nextLine();
