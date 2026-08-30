@@ -84,6 +84,24 @@ public class Pedido {
             throw new PedidoInvalidoException("O pedido precisa ter pelo menos um item!");
         }
     }
+    public void mostrarResumo(){
+        System.out.println("Cliente: " + this.cliente.getNome());
+        System.out.println("Itens: ");
+        mostrarItens(0);
+
+        System.out.println("Subtotal: " + this.calcularSubtotal(0));
+        System.out.println("Taxa de entrega: " + this.taxaEntrega);
+        System.out.println("Desconto: " + this.desconto);
+        System.out.println("Total: " + this.calcularTotal());
+    }
+    private void mostrarItens(int indice){
+        if(indice >= this.itens.size()){
+            return;
+        }
+        ItemPedido itemAtual = this.itens.get(indice);
+        System.out.println(itemAtual.getQuantidade() + "x " + itemAtual.getProduto().getNome() + " - R$ " + itemAtual.calcularSubtotalDoItem());
+        mostrarItens(indice + 1);
+    }
 
 
 }
