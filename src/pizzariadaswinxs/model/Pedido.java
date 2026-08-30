@@ -62,5 +62,22 @@ public class Pedido {
             this.itens.add(novoItem);
         }
     }
+    private BigDecimal calcularSubtotal(int indice){
+        if(indice >= this.itens.size()){
+            return BigDecimal.ZERO;
+        }
+        ItemPedido itemAtual = this.itens.get(indice);
+        BigDecimal subtotalItemAtual = itemAtual.calcularSubtotalDoItem();
+        return subtotalItemAtual.add(calcularSubtotal(indice + 1));
+
+    }
+    public boolean estaVazio(){
+        return this.itens.isEmpty();
+    }
+
+    public BigDecimal calcularTotal(){
+        return calcularSubtotal(0).add(this.taxaEntrega).subtract(this.desconto);
+    }
+
 
 }
