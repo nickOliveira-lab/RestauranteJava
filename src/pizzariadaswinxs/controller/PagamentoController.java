@@ -69,7 +69,7 @@ public class PagamentoController {
     private String perguntarFormaPagamento() {
 
         System.out.println("-----+-----+--Pagamento--+-----+-----+-");
-        System.out.println("|     1. PIX                          |");
+        System.out.println("|     1. PIX                           |");
         System.out.println("|     2. Cartão de Crédito             |");
         System.out.println("|     3. Cartão de Débito              |");
         System.out.println("|     4. Dinheiro                      |");

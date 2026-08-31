@@ -26,9 +26,9 @@ public class MenuController {
     );
 
     private final List<Bebida> bebidas = List.of(
-            new Bebida("Coca-Cola 1 Litro", new BigDecimal("8.00"), "Refrigerante"),
-            new Bebida("Antarctica 1 litro", new BigDecimal("7.00"), "Refrigerante"),
-            new Bebida("Suco de Maracujá 700 ml", new BigDecimal("8.00"), "Suco"),
+            new Bebida("Coca-Cola 1 Lt  ", new BigDecimal("8.00"), "Refrigerante"),
+            new Bebida("Antarctica 1 lT ", new BigDecimal("7.00"), "Refrigerante"),
+            new Bebida("Suco / Uva 700ml", new BigDecimal("8.00"), "Suco"),
             new Bebida("Água 500 ml", new BigDecimal("5.00"), "Água")
     );
 
