@@ -17,28 +17,28 @@ public class MenuController {
     private final Scanner scanner;
 
     private final List<Pizza> pizzas = List.of(
-            new Pizza("Calabresa", new BigDecimal("35.00"), "Salgada"),
-            new Pizza("Frango com Catupiry", new BigDecimal("40.00"), "Salgada"),
-            new Pizza("Quatro Queijos", new BigDecimal("42.00"), "Salgada"),
-            new Pizza("Portuguesa", new BigDecimal("40.00"), "Salgada"),
-            new Pizza("Chocolate", new BigDecimal("38.00"), "Doce"),
-            new Pizza("Banana com Canela", new BigDecimal("35.00"), "Doce")
+            new Pizza("Calabresa G ", new BigDecimal("35.00"), "Salgada"),
+            new Pizza("Frango com Catupiry G", new BigDecimal("40.00"), "Salgada"),
+            new Pizza("Quatro Queijos G", new BigDecimal("42.00"), "Salgada"),
+            new Pizza("Portuguesa G", new BigDecimal("40.00"), "Salgada"),
+            new Pizza("Chocolate G", new BigDecimal("38.00"), "Doce"),
+            new Pizza("Banana com Canela G", new BigDecimal("35.00"), "Doce")
     );
 
     private final List<Bebida> bebidas = List.of(
-            new Bebida("Coca-Cola", new BigDecimal("8.00"), "Refrigerante"),
-            new Bebida("Antarctica", new BigDecimal("7.00"), "Refrigerante"),
-            new Bebida("Suco de Maracujá", new BigDecimal("8.00"), "Suco"),
-            new Bebida("Água", new BigDecimal("5.00"), "Água")
+            new Bebida("Coca-Cola 1 Litro", new BigDecimal("8.00"), "Refrigerante"),
+            new Bebida("Antarctica 1 litro", new BigDecimal("7.00"), "Refrigerante"),
+            new Bebida("Suco de Maracujá 700 ml", new BigDecimal("8.00"), "Suco"),
+            new Bebida("Água 500 ml", new BigDecimal("5.00"), "Água")
     );
 
     private final List<Sobremesa> sobremesas = List.of(
-            new Sobremesa("Pudim", new BigDecimal("10.00")),
-            new Sobremesa("Romeu e Julieta", new BigDecimal("10.00")),
-            new Sobremesa("Banana com Canela", new BigDecimal("10.00"))
+            new Sobremesa("Pudim 100 gr", new BigDecimal("10.00")),
+            new Sobremesa("Romeu e Julieta 100 gr", new BigDecimal("10.00")),
+            new Sobremesa("Banana com Canela 100 gr", new BigDecimal("10.00"))
     );
 
-    private final Combo combo = new Combo("Combo Pizza + Refrigerante", new BigDecimal("45.00"));
+    private final Combo combo = new Combo("Combo Pizza + Refrigerante 1 litro", new BigDecimal("45.00"));
 
     public MenuController(Scanner scanner) {
         this.scanner = scanner;
