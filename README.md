@@ -52,7 +52,7 @@ Abra o projeto no IntelliJ e execute `Main.java` (▶️).
 
 | Responsável | Parte |
 |---|---|
-| Tarsila e Luiza | Model |
+| Tarcilla e Luiza | Model |
 | Douglas | Menu / cardápio |
 | Nicolas | Pedido, cálculo, resumo e finalização |
 | Jonas e José Carlos | Delivery e pagamento |
